@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
+            cbDestino = new ComboBox();
+            cbTransporte = new ComboBox();
+            tbPrecio = new TextBox();
             tbCuit = new TextBox();
             tbNombre = new TextBox();
             tbTelefono = new TextBox();
@@ -51,119 +51,133 @@
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // comboBox1
+            // cbDestino
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Buenos Aires", "Bariloche", "Rosario" });
-            comboBox1.Location = new Point(126, 12);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 0;
+            cbDestino.FormattingEnabled = true;
+            cbDestino.Items.AddRange(new object[] { "Buenos Aires", "Bariloche", "Rosario" });
+            cbDestino.Location = new Point(162, 17);
+            cbDestino.Margin = new Padding(4, 4, 4, 4);
+            cbDestino.Name = "cbDestino";
+            cbDestino.Size = new Size(154, 29);
+            cbDestino.TabIndex = 0;
             // 
-            // comboBox2
+            // cbTransporte
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Bus", "Avion" });
-            comboBox2.Location = new Point(126, 70);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 1;
+            cbTransporte.FormattingEnabled = true;
+            cbTransporte.Items.AddRange(new object[] { "Bus", "Avion" });
+            cbTransporte.Location = new Point(162, 98);
+            cbTransporte.Margin = new Padding(4, 4, 4, 4);
+            cbTransporte.Name = "cbTransporte";
+            cbTransporte.Size = new Size(154, 29);
+            cbTransporte.TabIndex = 1;
             // 
-            // textBox1
+            // tbPrecio
             // 
-            textBox1.Location = new Point(126, 41);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            tbPrecio.Location = new Point(162, 57);
+            tbPrecio.Margin = new Padding(4, 4, 4, 4);
+            tbPrecio.Name = "tbPrecio";
+            tbPrecio.Size = new Size(127, 29);
+            tbPrecio.TabIndex = 2;
             // 
             // tbCuit
             // 
-            tbCuit.Location = new Point(114, 23);
+            tbCuit.Location = new Point(147, 32);
+            tbCuit.Margin = new Padding(4, 4, 4, 4);
             tbCuit.Name = "tbCuit";
-            tbCuit.Size = new Size(100, 23);
+            tbCuit.Size = new Size(127, 29);
             tbCuit.TabIndex = 3;
             // 
             // tbNombre
             // 
-            tbNombre.Location = new Point(114, 52);
+            tbNombre.Location = new Point(147, 73);
+            tbNombre.Margin = new Padding(4, 4, 4, 4);
             tbNombre.Name = "tbNombre";
-            tbNombre.Size = new Size(100, 23);
+            tbNombre.Size = new Size(281, 29);
             tbNombre.TabIndex = 4;
             // 
             // tbTelefono
             // 
-            tbTelefono.Location = new Point(114, 81);
+            tbTelefono.Location = new Point(147, 113);
+            tbTelefono.Margin = new Padding(4, 4, 4, 4);
             tbTelefono.Name = "tbTelefono";
-            tbTelefono.Size = new Size(100, 23);
+            tbTelefono.Size = new Size(127, 29);
             tbTelefono.TabIndex = 5;
             // 
             // tbTarjeta
             // 
-            tbTarjeta.Location = new Point(114, 110);
+            tbTarjeta.Location = new Point(147, 154);
+            tbTarjeta.Margin = new Padding(4, 4, 4, 4);
             tbTarjeta.Name = "tbTarjeta";
-            tbTarjeta.Size = new Size(100, 23);
+            tbTarjeta.Size = new Size(127, 29);
             tbTarjeta.TabIndex = 6;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(36, 28);
+            label1.Location = new Point(83, 20);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(63, 21);
             label1.TabIndex = 8;
-            label1.Text = "label1";
+            label1.Text = "Destino";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(39, 49);
+            label2.Location = new Point(92, 57);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(53, 21);
             label2.TabIndex = 9;
-            label2.Text = "label2";
+            label2.Text = "Precio";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(36, 78);
+            label3.Location = new Point(61, 101);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(84, 21);
             label3.TabIndex = 10;
-            label3.Text = "label3";
+            label3.Text = "Transporte";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(49, 23);
+            label4.Location = new Point(63, 32);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(62, 15);
+            label4.Size = new Size(82, 21);
             label4.TabIndex = 11;
             label4.Text = "CUIT/CUIL";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(49, 55);
+            label5.Location = new Point(63, 77);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(51, 15);
+            label5.Size = new Size(68, 21);
             label5.TabIndex = 12;
             label5.Text = "Nombre";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(49, 84);
+            label6.Location = new Point(63, 118);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(52, 15);
+            label6.Size = new Size(68, 21);
             label6.TabIndex = 13;
             label6.Text = "Telefono";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(41, 113);
+            label7.Location = new Point(53, 158);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(58, 15);
+            label7.Size = new Size(77, 21);
             label7.TabIndex = 14;
             label7.Text = "N° Tarjeta";
             // 
@@ -177,18 +191,21 @@
             groupBox1.Controls.Add(tbTarjeta);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
-            groupBox1.Location = new Point(12, 99);
+            groupBox1.Location = new Point(15, 139);
+            groupBox1.Margin = new Padding(4, 4, 4, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(353, 137);
+            groupBox1.Padding = new Padding(4, 4, 4, 4);
+            groupBox1.Size = new Size(454, 192);
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
             // btnGenerar
             // 
-            btnGenerar.Location = new Point(270, 11);
+            btnGenerar.Location = new Point(347, 15);
+            btnGenerar.Margin = new Padding(4, 4, 4, 4);
             btnGenerar.Name = "btnGenerar";
-            btnGenerar.Size = new Size(75, 43);
+            btnGenerar.Size = new Size(96, 60);
             btnGenerar.TabIndex = 17;
             btnGenerar.Text = "Generar";
             btnGenerar.UseVisualStyleBackColor = true;
@@ -196,9 +213,10 @@
             // 
             // bntResumen
             // 
-            bntResumen.Location = new Point(270, 74);
+            bntResumen.Location = new Point(347, 104);
+            bntResumen.Margin = new Padding(4, 4, 4, 4);
             bntResumen.Name = "bntResumen";
-            bntResumen.Size = new Size(75, 23);
+            bntResumen.Size = new Size(96, 32);
             bntResumen.TabIndex = 18;
             bntResumen.Text = "Resumen";
             bntResumen.UseVisualStyleBackColor = true;
@@ -206,9 +224,10 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(251, 251);
+            btnSalir.Location = new Point(326, 339);
+            btnSalir.Margin = new Padding(4, 4, 4, 4);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(75, 23);
+            btnSalir.Size = new Size(96, 32);
             btnSalir.TabIndex = 19;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -216,9 +235,10 @@
             // 
             // btnEjemplo
             // 
-            btnEjemplo.Location = new Point(53, 252);
+            btnEjemplo.Location = new Point(64, 339);
+            btnEjemplo.Margin = new Padding(4, 4, 4, 4);
             btnEjemplo.Name = "btnEjemplo";
-            btnEjemplo.Size = new Size(75, 23);
+            btnEjemplo.Size = new Size(96, 32);
             btnEjemplo.TabIndex = 20;
             btnEjemplo.Text = "Ejemplo";
             btnEjemplo.UseVisualStyleBackColor = true;
@@ -230,9 +250,9 @@
             // 
             // FormPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(388, 286);
+            ClientSize = new Size(477, 380);
             Controls.Add(btnEjemplo);
             Controls.Add(btnSalir);
             Controls.Add(bntResumen);
@@ -241,9 +261,11 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(tbPrecio);
+            Controls.Add(cbTransporte);
+            Controls.Add(cbDestino);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -257,9 +279,9 @@
 
         #endregion
 
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private TextBox textBox1;
+        private ComboBox cbDestino;
+        private ComboBox cbTransporte;
+        private TextBox tbPrecio;
         private TextBox tbCuit;
         private TextBox tbNombre;
         private TextBox tbTelefono;

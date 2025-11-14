@@ -17,8 +17,8 @@ public partial class FormPrincipal : Form
         try
         {
 
-            string destino = comboBox1.SelectedItem as string;
-            string tipo = comboBox2.SelectedItem as string;
+            string destino = cbDestino.SelectedItem as string;
+            string tipo = cbTransporte.SelectedItem as string;
 
             string cuit = tbCuit.Text;
             string nombre = tbNombre.Text;
@@ -47,15 +47,20 @@ public partial class FormPrincipal : Form
         try
         {
             fs = new FileStream("sistema.dat", FileMode.Open, FileAccess.Read);
+
+            //solo en netcore
 #pragma warning disable SYSLIB0011
+
             BinaryFormatter bf = new BinaryFormatter();
 
             miEmpresa = bf.Deserialize(fs) as Sistema;
+
+            //solo en netcore
 #pragma warning restore SYSLIB0011
         }
         catch (Exception ex)
         {
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         finally
         {
@@ -105,8 +110,13 @@ public partial class FormPrincipal : Form
             {
                 fs = new FileStream(path, FileMode.Open, FileAccess.Read);
                 miEmpresa.ImportarTransporte(fs);
-            } catch (Exception ex) { }
-            finally {
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 if (fs != null) fs.Close(); ;
             }
         }

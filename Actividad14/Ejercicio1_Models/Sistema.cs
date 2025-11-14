@@ -18,10 +18,17 @@ public class Sistema
     {
         Transporte t=ResuelvaTransporte(destino, tipo);
 
-        Ticket ticket=new Ticket(cuit, nombre, telefono, tarjeta);
-        ticket.Destino = destino;
-        ticket.PrecioFinal = t.CalcularPrecioFinal();
-        tickets.Add(ticket);
+        if (t != null)
+        {
+            Ticket ticket = new Ticket(cuit, nombre, telefono, tarjeta);
+            ticket.Destino = destino;
+            ticket.PrecioFinal = t.CalcularPrecioFinal();
+            tickets.Add(ticket);
+        }
+        else
+        { 
+            throw new Exception("No existe transporte para el destino y tipo solicitado");
+        }
     }
 
     public Transporte ResuelvaTransporte(string destino,string tipo)
@@ -31,7 +38,7 @@ public class Sistema
         {
             if (transportes[n].Destino == destino
                       && ( (transportes[n] is Bus && tipo == "Bus")
-                      || (transportes[n] is Bus && tipo == "Avion")))
+                      || (transportes[n] is Avion && tipo == "Avion")))
             { 
                 buscado= transportes[n];
             }
@@ -61,8 +68,8 @@ public class Sistema
             }
             else if (campos.Length == 4)
             {
-                string patente = campos[3];
-                string clase = campos[4];
+                string patente = campos[2];
+                string clase = campos[3];
                 transporte = new Bus(destino, precio, patente, clase);
             }
             else

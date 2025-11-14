@@ -1,6 +1,0 @@
-﻿Tipo Transporte;Destino;precio;patente;clase  (bus:Tipo=0)
-Tipo Transporte;Destino;precio;identificador  (avion: Tipo = 1)
-1;Buenos Aires;2250;LVAHZ
-0;Rosario;1200;FFF330;3 estrellas
-1;Bariloche;3400;LVABB
-0;Buenos Aires;1900;AC123AA;5 estrellas
